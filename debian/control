@@ -1,22 +1,12 @@
-Source: elite-cs-series-sdk
-Section: libs
+Source: ros-humble-elite-cs-series-sdk
+Section: misc
 Priority: optional
-Maintainer: Elite Robots <elite@elibot.cn>
-Build-Depends: 
-  debhelper (>= 9), 
-  cmake(>= 3.5),
-  libboost-all-dev(>=1.58),
-  libssh-dev
-Standards-Version: 4.6.0
+Maintainer: "Elite Robots" <dukang@elibot.cn>
+Build-Depends: debhelper (>= 9.0.0), libboost-all-dev, libssh-dev, ros-humble-ament-cmake, ros-humble-ros-workspace
 Homepage: https://www.eliterobots.com/
-Vcs-Browser: https://github.com/Elite-Robots/Elite_Robots_CS_SDK
-Vcs-Git: https://github.com/Elite-Robots/Elite_Robots_CS_SDK.git
-Rules-Requires-Root: no
+Standards-Version: 3.9.2
 
-Package: elite-cs-series-sdk
-Architecture: amd64 arm64
-Depends: 
-  ${shlibs:Depends},
-  ${misc:Depends},
-  libssh-dev${elite:BoostDepends}
-Description: Elite Robots CS Series SDK.
+Package: ros-humble-elite-cs-series-sdk
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libboost-all-dev, libssh-dev, ros-humble-ros-workspace
+Description: Elite Robots CS Series SDK (C++ library for Elibot CS series robotic arms).
